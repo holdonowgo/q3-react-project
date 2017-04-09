@@ -457,3 +457,5 @@ export const exerciseTypes = [
     "name": "Strongman"
   }
 ];
+
+export default allExercises;
