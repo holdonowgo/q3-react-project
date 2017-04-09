@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import banner from '../banner.jpg';
+import allExercises from '../data/exercises';
+import {bicepRoutines, tricepRoutines} from '../data/routines';
+console.log(bicepRoutines);
 
 class Routines extends Component {
   render() {
-    var cards = [1,2,3,4].map(function(item) {
+    var cards = bicepRoutines.map(function(exercise) {
       return (
         <div className="card">
           <img src={banner} />
           <div className="card-section">
-            <p>This is a simple card with an image.</p>
+            <h3>{exercise.name}</h3>
           </div>
         </div>
       );
