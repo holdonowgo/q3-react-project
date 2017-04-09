@@ -1,4 +1,4 @@
-export const allExercises = [
+const allExercises = [
   {
     "id": 1,
     "name": "Bear Crawl Fire Feet",
@@ -406,55 +406,6 @@ export const allExercises = [
       "id": 6,
       "name": "Machine"
     }
-  }
-];
-
-const exercise = {
-  "id": 8,
-  "name": "Elliptical Trainer",
-  "muscle": {
-    "id": 10,
-    "name": "Quadriceps",
-    "size": ""
-  },
-  "type": {
-    "id": 1,
-    "name": "Cardio"
-  },
-  "equipment": {
-    "id": 6,
-    "name": "Machine"
-  }
-};
-
-const exerciseTypes = [
-  {
-    "id": 1,
-    "name": "Cardio"
-  },
-  {
-    "id": 2,
-    "name": "Olympic Weightlifting"
-  },
-  {
-    "id": 3,
-    "name": "Plyometrics"
-  },
-  {
-    "id": 4,
-    "name": "Powerlifting"
-  },
-  {
-    "id": 5,
-    "name": "Strength"
-  },
-  {
-    "id": 6,
-    "name": "Stretching"
-  },
-  {
-    "id": 7,
-    "name": "Strongman"
   }
 ];
 
