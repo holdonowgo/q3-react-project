@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import connect from 'react-redux'
-import { Link } from 'react-router';
+import {Link} from 'react-router-dom';
 import {
   Row,
   Column,
@@ -21,11 +21,10 @@ class Navbar extends Component {
       <TopBar className="navbar">
         <Row>
           <Column>
-            <TopBarTitle className="navbar__title">Home</TopBarTitle>
+            <TopBarTitle className="navbar__title"><Link to="/two">Here</Link></TopBarTitle>
             <TopBarRight className="navbar__right">
               <Menu>
-                <MenuItem className="menu-item">
-                  Log in
+                <MenuItem className="menu-item">Hello
                 </MenuItem>
               </Menu>
             </TopBarRight>

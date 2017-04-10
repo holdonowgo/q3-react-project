@@ -6,28 +6,40 @@ import Routines from './components/Routines';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/NavBar'
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  };
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={banner2} className="App-logo" alt="logo" />
-          <h2>Welcome to Fit-Init</h2>
-          <Navbar />
-        </div>
-        {/* <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
-        <Dashboard />
-        <Routines />
+      <Router>
+      <div>
+        <Route exact path="/" component={IndexPage} />
+        <Route path="/two" component={Hello} />
       </div>
+    </Router>
     );
   };
 }
+const Hello = () => {
+  return <div> hello </div>
+}
 
+const IndexPage = () => {
+  return (
+    <div className="App">
+      <div className="App-header">
+        <img src={banner2} className="App-logo" alt="logo" />
+        <h2>Welcome to Fit-Init</h2>
+        <Navbar />
+      </div>
+      <Dashboard />
+      <Routines />
+    </div>
+  )
+}
 export default App;
