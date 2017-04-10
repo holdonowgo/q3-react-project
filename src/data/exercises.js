@@ -1,4 +1,4 @@
-const allExercises = [
+const exercises = [
   {
     "id": 1,
     "name": "Bear Crawl Fire Feet",
@@ -409,4 +409,4 @@ const allExercises = [
   }
 ];
 
-export default allExercises;
+export default exercises;

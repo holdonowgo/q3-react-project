@@ -1,4 +1,4 @@
-export const allExercises = [
+export const exercises = [
   {
     "id": 1,
     "name": "Bear Crawl Fire Feet",
@@ -458,4 +458,4 @@ const exerciseTypes = [
   }
 ];
 
-// export default allExercises;
+export default exercises;

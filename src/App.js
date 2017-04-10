@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import banner from './banner.jpg';
 import banner2 from './woman-dumbell-exercise.svg';
 import Routines from './components/Routines';
+import Dashboard from './components/Dashboard';
 import NavBar from './components/NavBar';
 import './App.css';
 
@@ -21,7 +22,7 @@ class App extends Component {
         {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-          <NavBar />
+        <Dashboard />
         <Routines />
       </div>
     );
