@@ -1,9 +1,9 @@
-const GET_EXERCISES = "http://paolitaclo-routinegenerator.herokuapp.com/api/exercises";
-const GET_EXERCISE_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/exercises/";
-const GET_EXERCIES_TYPES = "http://paolitaclo-routinegenerator.herokuapp.com/api/exercises/types";
-const GET_EXERCISE_TYPE_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/exercises/types/";
-const GET_EQUIPMENT = "http://paolitaclo-routinegenerator.herokuapp.com/api/equipment";
-const GET_EQUIPMENT_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/equipment/";
-const GET_MUSCLES = "http://paolitaclo-routinegenerator.herokuapp.com/api/muscles";
-const GET_MUSCLE_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/muscles/";
-const GET_ROUTINES = "http://paolitaclo-routinegenerator.herokuapp.com/api/routines";
+export const GET_EXERCISES = "http://paolitaclo-routinegenerator.herokuapp.com/api/exercises";
+export const GET_EXERCISE_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/exercises/";
+export const GET_EXERCIES_TYPES = "http://paolitaclo-routinegenerator.herokuapp.com/api/exercises/types";
+export const GET_EXERCISE_TYPE_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/exercises/types/";
+export const GET_EQUIPMENT = "http://paolitaclo-routinegenerator.herokuapp.com/api/equipment";
+export const GET_EQUIPMENT_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/equipment/";
+export const GET_MUSCLES = "http://paolitaclo-routinegenerator.herokuapp.com/api/muscles";
+export const GET_MUSCLE_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/muscles/";
+export const GET_ROUTINES = "http://paolitaclo-routinegenerator.herokuapp.com/api/routines?muscleGroup=biceps";

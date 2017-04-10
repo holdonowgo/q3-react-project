@@ -24,6 +24,7 @@ class Routines extends Component {
   }
 
   render() {
+    console.log(this.props);
     var cards = this.props.bicepRoutines.map(routine => {
       return (
         <div className="card">
