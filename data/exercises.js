@@ -458,4 +458,4 @@ const exerciseTypes = [
   }
 ];
 
-// export default allExercises;
+export default allExercises;
