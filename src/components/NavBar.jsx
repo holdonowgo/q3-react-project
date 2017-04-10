@@ -1,36 +1,42 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import React, { PropTypes, Component } from 'react';
+import { Link } from 'react-router';
+import {
+  Row,
+  Column,
+  TopBar,
+  TopBarTitle,
+  TopBarRight,
+  Menu,
+  MenuItem
+} from 'react-foundation';
+// { isAuthenticated }
+// !isAuthenticated ?
+// :<Link to="/logout">Log out</Link>
 
-class NavBar extends Component {
+class Navbar extends Component {
+
   render() {
     return (
-      <div className="container">
-      <div className="icon-bar five-up" role="navigation">
-        <a className="item" aria-labelledby="#itemlabel1">
-          <i className="fi-home large"></i>
-          <label id='itemlabel1'>Home</label>
-        </a>
-        <a className="item" aria-labelledby="#itemlabel2">
-          <i className="fi-bookmark"></i>
-          <label id='itemlabel2'>Bookmark</label>
-        </a>
-        <a className="item" aria-labelledby="#itemlabel3">
-          <i className="fi-info"></i>
-          <label id='itemlabel3'>Info</label>
-        </a>
-        <a className="item" aria-labelledby="#itemlabel4">
-          <i className="fi-mail"></i>
-          <label id='itemlabel4'>Mail</label>
-        </a>
-        <a className="item" aria-labelledby="#itemlabel5">
-          <i className="fi-like"></i>
-          <label id='itemlabel5'>Like</label>
-        </a>
-      </div>
-    </div>
+      <TopBar className="navbar">
+        <Row>
+          <Column>
+            <TopBarTitle className="navbar__title">Home</TopBarTitle>
+            <TopBarRight className="navbar__right">
+              <Menu>
+                <MenuItem>
+                  Log in
+                </MenuItem>
+              </Menu>
+            </TopBarRight>
+          </Column>
+        </Row>
+      </TopBar>
     );
   }
 }
 
-export default connect()(NavBar);
+export default (Navbar);
+
+Navbar.propTypes = {
+  isAuthenticated: PropTypes.bool
+};
