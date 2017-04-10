@@ -9,7 +9,7 @@ const routines = (
   },
   action) => {
   switch (action.type) {
-    case 'DO_SEARCH':
+    case 'DO_SEARCH_FULFILLED':
       return {
         ...state,
         bicepRoutines: action.payload.bicepRoutines,
