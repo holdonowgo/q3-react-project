@@ -7,7 +7,19 @@ import reactApp from './reducers';
 import App from './App';
 import './index.css';
 
+const store = createStore(
+  reactApp,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(promiseMiddleware())
+)
+
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
+
+if (module.hot) {
+  module.hot.accept()
+}

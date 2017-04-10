@@ -1,17 +1,35 @@
 import React, { Component } from 'react';
 import banner from '../banner.jpg';
-import allExercises from '../data/exercises';
-import {bicepRoutines, tricepRoutines} from '../data/routines';
-console.log(bicepRoutines);
+import { connect } from 'react-redux'
+import { doSearch } from '../actions'
+import { bindActionCreators } from 'redux'
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    bicepRoutines: state.routines.bicepRoutines,
+    chestRoutines: state.routines.chestRoutines,
+    shoulderRoutines: state.routines.shoulderRoutines,
+    tricepRoutines: state.routines.tricepRoutines
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ doSearch }, dispatch);
+}
 
 class Routines extends Component {
+
+  handleSearch = (event) => {
+    this.props.doSearch()
+  }
+
   render() {
-    var cards = bicepRoutines.map(function(exercise) {
+    var cards = this.props.bicepRoutines.map(routine => {
       return (
         <div className="card">
           <img src={banner} />
           <div className="card-section">
-            <h3>{exercise.name}</h3>
+            <h3>{routine.name}</h3>
           </div>
         </div>
       );
@@ -19,10 +37,19 @@ class Routines extends Component {
 
     return (
       <div>
-        {cards}
+        <button
+          type="submit"
+          className="hollow button"
+          onClick={this.handleSearch}>
+          {this.props.children}
+          Get Routines
+        </button>
+        <div>
+          {cards}
+        </div>
       </div>
     );
   }
 }
 
-export default Routines;
+export default connect(mapStateToProps, mapDispatchToProps)(Routines);
