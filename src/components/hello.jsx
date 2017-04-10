@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import banner from './banner.jpg';
-import banner2 from './woman-dumbell-exercise.svg';
-import Routines from './components/Routines';
-import Dashboard from './components/Dashboard';
-import Navbar from './components/NavBar'
-import './App.css';
+import logo from '../logo.svg';
+import banner from '../banner.jpg';
+import banner2 from '../woman-dumbell-exercise.svg';
+import Routines from './Routines';
+import Dashboard from './Dashboard';
+import '../App.css';
+import Navbar from './NavBar'
+import React, { PropTypes, Component } from 'react';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-  };
+class Hello extends Component {
 
   render() {
     return (
@@ -30,4 +27,4 @@ class App extends Component {
   };
 }
 
-export default App;
+export default (Hello);
