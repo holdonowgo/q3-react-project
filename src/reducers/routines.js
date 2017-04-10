@@ -1,6 +1,6 @@
 //response reducer.
 
-export const routines = (
+const routines = (
   state = {
     bicepRoutines: [],
     chestRoutines: [],
@@ -8,7 +8,6 @@ export const routines = (
     tricepRoutines: []
   },
   action) => {
-    console.log(action);
   switch (action.type) {
     case 'DO_SEARCH_FULFILLED':
       return {
@@ -22,3 +21,5 @@ export const routines = (
       return state
   }
 }
+
+export default routines;

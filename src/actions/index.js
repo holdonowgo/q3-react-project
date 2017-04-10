@@ -10,17 +10,20 @@ export const doSearch = () => {
   };
 
   // axios.get(Routes.GET_ROUTINES, config);
-  var data = {
+  var dummy_data = {
     chestRoutines: chestRoutines,
     shoulderRoutines: shoulderRoutines,
     tricepRoutines: tricepRoutines
   };
 
-  axios.get(Routes.GET_ROUTINES)
+  let data = axios.get(Routes.GET_ROUTINES)
   .then((result) => {
-    data['bicepRoutines'] = result.data;
+    console.log(result.data);
+    dummy_data['bicepRoutines'] = result.data;
+    return dummy_data;
   });
 
+// console.log(data);
   return {
     type: 'DO_SEARCH',
     payload: data
