@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import connect from 'react-redux'
 import {Link} from 'react-router-dom';
 import {
   Row,
@@ -7,8 +6,6 @@ import {
   TopBar,
   TopBarTitle,
   TopBarRight,
-  Menu,
-  MenuItem
 } from 'react-foundation';
 // { isAuthenticated }
 // !isAuthenticated ?
@@ -21,12 +18,8 @@ class Navbar extends Component {
       <TopBar className="navbar">
         <Row>
           <Column>
-            <TopBarTitle className="navbar__title"><Link to="/two">Here</Link></TopBarTitle>
-            <TopBarRight className="navbar__right">
-              <Menu>
-                <MenuItem className="menu-item">Hello
-                </MenuItem>
-              </Menu>
+            <TopBarTitle><Link className="navbar__title" to="/">Home</Link></TopBarTitle>
+            <TopBarRight><Link className="navbar__right" to="/two">Two</Link>
             </TopBarRight>
           </Column>
         </Row>
