@@ -18,9 +18,13 @@ class Navbar extends Component {
       <TopBar className="navbar">
         <Row>
           <Column>
-            <TopBarTitle><Link className="navbar__title" to="/">Home</Link></TopBarTitle>
-            <TopBarRight><Link className="navbar__right" to="/two">Two</Link>
-            </TopBarRight>
+            <TopBarTitle><Link className="navbar" to="/">Home</Link></TopBarTitle>
+            <TopBarTitle><Link className="navbar" to="/dashboard">Dashboard</Link>
+          </TopBarTitle>
+            <TopBarTitle><Link className="navbar" to="/exercises">Exercises</Link>
+          </TopBarTitle>
+            <TopBarTitle><Link className="navbar" to="/routines">Routines</Link>
+          </TopBarTitle>
           </Column>
         </Row>
       </TopBar>
