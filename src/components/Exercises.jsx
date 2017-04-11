@@ -51,7 +51,7 @@ class Exercies extends Component {
                 <Segment raised='true' textAlign='center'>
                   <Image src='../../images/profiles/matthew.png' size='small' shape='circular'/>
                   <Image src={exercise.type.name === 'Strength' ? strength : cardio} size='small' shape='circular'/>
-                  <Message header={exercise.name} list={[exercise.muscle.name, exercise.type.name, exercise.equipment.name]} />
+                  <Message header={exercise.name} list={[`MUSCLE:  ${  exercise.muscle.name}`, `TYPE:  ${  exercise.type.name}`, `EQUIPMENT:  ${  exercise.equipment.name}`]} />
                 </Segment>
               </Grid.Column>
             <Grid.Column />
@@ -63,7 +63,8 @@ class Exercies extends Component {
     return (
       <div>
         <Button.Group className='button-group'>
-          <Button className={this.props.status === 'pending' ? 'loading' : 'primary'} color='olive' value='biceps' onClick={this.refreshData}>{this.props.children}REFRESH</Button>
+          <Button className={this.props.status === 'pending' ? 'loading' : 'primary'}
+            color='olive' value='biceps' onClick={this.refreshData}>{this.props.children}REFRESH</Button>
         </Button.Group>
         <Grid centered columns={3}>
           {segments}
