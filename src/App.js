@@ -6,6 +6,7 @@ import Exercises from './components/Exercises';
 import Dashboard from './components/Dashboard';
 import Media from './components/Media';
 import Navbar from './components/NavBar'
+import Landing from './components/Landing'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -23,7 +24,7 @@ class App extends Component {
         </div>
         <Router>
           <div>
-            <Navbar />
+            <Navbar color={'pink'}/>
             <Route exact path="/" component={IndexPage} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/exercises" component={Exercises} />
@@ -38,6 +39,7 @@ class App extends Component {
 const IndexPage = () => {
   return (
     <div>
+      <Landing />
     </div>
   )
 }
