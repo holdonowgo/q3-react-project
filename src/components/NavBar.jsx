@@ -10,6 +10,10 @@ import {Link} from 'react-router-dom';
 import { Menu } from 'semantic-ui-react'
 
 export default class Navbar extends Component {
+
+  static propTypes = {
+  color: PropTypes.string,
+  }
   state = {}
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -17,8 +21,10 @@ export default class Navbar extends Component {
   render() {
     const { activeItem } = this.state
 
+    const { color } = this.props
+
     return (
-      <Menu pointing>
+      <Menu tabular inverted color={color} key={color}>
         <Link to="/"><Menu.Item
           name='Home'
           active={activeItem === 'Home'}
@@ -53,33 +59,3 @@ export default class Navbar extends Component {
     )
   }
 }
-// { isAuthenticated }
-// !isAuthenticated ?
-// :<Link to="/logout">Log out</Link>
-
-// class Navbar extends Component {
-//
-//   render() {
-//     return (
-//       <TopBar className="navbar">
-//         <Row>
-//           <Column>
-//             <TopBarTitle><Link className="navbar" to="/">Home</Link></TopBarTitle>
-//             <TopBarTitle><Link className="navbar" to="/dashboard">Dashboard</Link>
-//           </TopBarTitle>
-//             <TopBarTitle><Link className="navbar" to="/exercises">Exercises</Link>
-//           </TopBarTitle>
-//             <TopBarTitle><Link className="navbar" to="/routines">Routines</Link>
-//           </TopBarTitle>
-//           </Column>
-//         </Row>
-//       </TopBar>
-//     );
-//   }
-// }
-//
-// export default (Navbar);
-//
-// Navbar.propTypes = {
-//   isAuthenticated: PropTypes.bool
-// };
