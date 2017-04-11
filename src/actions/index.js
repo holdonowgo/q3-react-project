@@ -4,28 +4,42 @@ import axios from 'axios';
 import * as Routes from "../helpers/api";
 
 // should be a pure function
-export const doSearch = () => {
+export const fetchRoutines = (muscle) => {
   var config = {
     headers: {'X-My-Custom-Header': 'Header-Value'}
   };
 
-  // axios.get(Routes.GET_ROUTINES, config);
-  var dummy_data = {
-    chestRoutines: chestRoutines,
-    shoulderRoutines: shoulderRoutines,
-    tricepRoutines: tricepRoutines
-  };
+  let url = '';
+  switch(muscle) {
+    case 'biceps':
+      url = Routes.GET_ROUTINES_BICEPS;
+    case 'chest':
+      url = Routes.GET_ROUTINES_CHEST;
+    case 'shoulders':
+      url = Routes.GET_ROUTINES_SHOULDERS;
+    case 'triceps':
+      url = Routes.GET_ROUTINES_TRICEPS;
+  }
 
-  let data = axios.get(Routes.GET_ROUTINES)
+  let data = axios.get(url)
   .then((result) => {
-    console.log(result.data);
-    dummy_data['bicepRoutines'] = result.data;
-    return dummy_data;
+    return result.data;
   });
 
-// console.log(data);
   return {
-    type: 'DO_SEARCH',
+    type: 'FETCH_ROUTINES',
+    payload: data
+  };
+}
+
+export const fetchExercises = () => {
+  let data = axios.get(Routes.GET_EXERCISES)
+  .then((result) => {
+    return result.data;
+  });
+
+  return {
+    type: 'FETCH_EXERCISES',
     payload: data
   };
 }

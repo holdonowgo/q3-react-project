@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
 import banner from '../banner.jpg';
 import { connect } from 'react-redux'
-import { doSearch } from '../actions'
+import { fetchRoutines } from '../actions'
 import { bindActionCreators } from 'redux'
+import $ from 'jquery';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    bicepRoutines: state.routines.bicepRoutines,
-    chestRoutines: state.routines.chestRoutines,
-    shoulderRoutines: state.routines.shoulderRoutines,
-    tricepRoutines: state.routines.tricepRoutines
+    routines: state.routines
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ doSearch }, dispatch);
+  return bindActionCreators({ fetchRoutines }, dispatch);
 }
 
 class Routines extends Component {
 
   handleSearch = (event) => {
-    this.props.doSearch()
+    this.props.fetchRoutines(event.target.value);
   }
 
   render() {
-    console.log(this.props);
-    var cards = this.props.bicepRoutines.map(routine => {
+    var cards = this.props.routines.map(routine => {
       return (
         <div className="card">
           <img src={banner} />
           <div className="card-section">
-            <h3>{routine.name}</h3>
+            <h3>Exercise: {routine.name}</h3>
+            <h3>Muscle: {routine.muscle.name}</h3>
+            <h3>Type: {routine.type.name}</h3>
+            <h3>Equipment: {routine.equipment.name}</h3>
           </div>
         </div>
       );
@@ -39,11 +39,36 @@ class Routines extends Component {
     return (
       <div>
         <button
+          value="biceps"
           type="submit"
           className="hollow button"
           onClick={this.handleSearch}>
           {this.props.children}
-          Get Routines
+          BICEPS
+        </button>
+        <button
+          value="chest"
+          type="submit"
+          className="hollow button"
+          onClick={this.handleSearch}>
+          {this.props.children}
+          CHEST
+        </button>
+        <button
+          value="shoulders"
+          type="submit"
+          className="hollow button"
+          onClick={this.handleSearch}>
+          {this.props.children}
+          SHOULDERS
+        </button>
+        <button
+          value="triceps"
+          type="submit"
+          className="hollow button"
+          onClick={this.handleSearch}>
+          {this.props.children}
+          TRICEPS
         </button>
         <div>
           {cards}

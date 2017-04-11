@@ -6,4 +6,7 @@ export const GET_EQUIPMENT = "http://paolitaclo-routinegenerator.herokuapp.com/a
 export const GET_EQUIPMENT_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/equipment/";
 export const GET_MUSCLES = "http://paolitaclo-routinegenerator.herokuapp.com/api/muscles";
 export const GET_MUSCLE_BY_ID = "http://paolitaclo-routinegenerator.herokuapp.com/api/muscles/";
-export const GET_ROUTINES = "http://paolitaclo-routinegenerator.herokuapp.com/api/routines?muscleGroup=biceps";
+export const GET_ROUTINES_BICEPS = "http://paolitaclo-routinegenerator.herokuapp.com/api/routines?muscleGroup=biceps";
+export const GET_ROUTINES_CHEST = "http://paolitaclo-routinegenerator.herokuapp.com/api/routines?muscleGroup=chest";
+export const GET_ROUTINES_SHOULDERS = "http://paolitaclo-routinegenerator.herokuapp.com/api/routines?muscleGroup=shoulders";
+export const GET_ROUTINES_TRICEPS = "http://paolitaclo-routinegenerator.herokuapp.com/api/routines?muscleGroup=triceps";

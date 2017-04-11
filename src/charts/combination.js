@@ -1,4 +1,8 @@
 const combination = {
+    size: {
+          height: 120,
+          width: 240
+    },
     data: {
         columns: [
             ['data1', 30, 20, 50, 40, 60, 50],
