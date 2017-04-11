@@ -4,10 +4,13 @@ import {bindActionCreators} from 'redux';
 import chart from '../data/scatter';
 import gauge from '../charts/guage';
 import {muscleDonut, typeDonut, equipmentDonut} from '../charts/donut';
+import { Table, Grid, Image, Button, Message, Menu, Segment } from 'semantic-ui-react'
 import combination from '../charts/combination';
 import C3Chart from 'react-c3js';
 import Navbar from './NavBar'
 import 'c3/c3.css';
+import '../App.css';
+import './Dashboard.css';
 
 class Dashboard extends Component {
     render() {
@@ -45,21 +48,33 @@ class Dashboard extends Component {
           }
       }
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="large-6 columns"><C3Chart data={data} axis={axis} /></div>
-                    <div className="large-6 columns"><C3Chart data={data1} /></div>
-                </div>
-                <div className="row">
-                    <div className="large-4 columns"><C3Chart data={muscleDonut.data} /></div>
-                    {/* <div className="large-4 columns"><C3Chart data={gauge.data} gauge={gauge.gauge} color={gauge.color} size={gauge.size} /></div> */}
-                    <div className="large-4 columns"><C3Chart data={typeDonut.data} /></div>
-                    <div className="large-4 columns"><C3Chart data={equipmentDonut.data} /></div>
-                </div>
-                <div className="row">
-                  <div className="large-12 columns"><C3Chart data={combination.data} /></div>
-                </div>
-            </div>
+        <Table celled structured>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell rowSpan='3'>
+                <Segment raised='true' textAlign='center'>
+                  <Image src='../../images/profiles/elyse.png' size='small' shape='circular'/>
+                  <Message header={'HERE IT IS'} list={['hello', 'goodbye']} />
+                </Segment>
+              </Table.Cell>
+              <Grid centered columns={4}>
+                <Grid.Row centered columns={2}>
+                  <Grid.Column><C3Chart className='chart' data={data} axis={axis} /></Grid.Column>
+                  <Grid.Column><C3Chart data={data1} /></Grid.Column>
+                </Grid.Row>
+                <Grid.Row centered columns={3}>
+                  <Grid.Column><C3Chart data={muscleDonut.data} /></Grid.Column>
+                  {/* <div className="large-4 columns"><C3Chart data={gauge.data} gauge={gauge.gauge} color={gauge.color} size={gauge.size} /></div> */}
+                  <Grid.Column><C3Chart data={typeDonut.data} /></Grid.Column>
+                  <Grid.Column><C3Chart data={equipmentDonut.data} /></Grid.Column>
+                </Grid.Row>
+                <Grid.Row centered columns={1}>
+                  <Grid.Column><C3Chart data={combination.data} /></Grid.Column>
+              </Grid.Row>
+            </Grid>
+            </Table.Row>
+          </Table.Body>
+        </Table>
         );
     }
 }
