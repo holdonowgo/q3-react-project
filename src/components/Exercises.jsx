@@ -3,6 +3,7 @@ import banner from '../banner.jpg';
 import { connect } from 'react-redux'
 import { fetchExercises } from '../actions'
 import { bindActionCreators } from 'redux'
+import Navbar from './NavBar'
 import $ from 'jquery';
 
 const mapStateToProps = (state, ownProps) => {
@@ -38,6 +39,7 @@ class Exercies extends Component {
 
     return (
       <div>
+        <Navbar />
         <button
           type="button"
           className="hollow button"

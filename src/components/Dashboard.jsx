@@ -6,6 +6,7 @@ import gauge from '../charts/guage';
 import {muscleDonut, typeDonut, equipmentDonut} from '../charts/donut';
 import combination from '../charts/combination';
 import C3Chart from 'react-c3js';
+import Navbar from './NavBar'
 import 'c3/c3.css';
 
 class Dashboard extends Component {
@@ -45,6 +46,7 @@ class Dashboard extends Component {
       }
         return (
             <div className="container">
+              <Navbar />
                 <div className="row">
                     <div className="large-6 columns"><C3Chart data={data} axis={axis} /></div>
                     <div className="large-6 columns"><C3Chart data={data1} /></div>

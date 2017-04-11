@@ -3,6 +3,7 @@ import banner from '../banner.jpg';
 import { connect } from 'react-redux'
 import { fetchRoutines } from '../actions'
 import { bindActionCreators } from 'redux'
+import Navbar from './NavBar'
 import $ from 'jquery';
 
 const mapStateToProps = (state, ownProps) => {
@@ -38,6 +39,7 @@ class Routines extends Component {
 
     return (
       <div>
+        <Navbar />
         <button
           value="biceps"
           type="submit"
