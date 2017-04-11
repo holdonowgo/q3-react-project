@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import banner from '../banner.jpg';
+// import banner from '../banner.jpg';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import media from '../data/media';
+import media from '../../data/media';
 
 class Media extends Component {
 
