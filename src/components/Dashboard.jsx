@@ -47,6 +47,7 @@ class Dashboard extends Component {
               label: 'Petal.Width'
           }
       }
+      console.log(muscleDonut.data);
         return (
         <Table celled structured>
           <Table.Body>
