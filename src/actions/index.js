@@ -12,12 +12,16 @@ export const fetchRoutines = (muscle) => {
   switch(muscle) {
     case 'biceps':
       url = Routes.GET_ROUTINES_BICEPS;
+      break;
     case 'chest':
       url = Routes.GET_ROUTINES_CHEST;
+      break;
     case 'shoulders':
       url = Routes.GET_ROUTINES_SHOULDERS;
+      break;
     case 'triceps':
       url = Routes.GET_ROUTINES_TRICEPS;
+      break;
   }
 
   let data = axios.get(url)
