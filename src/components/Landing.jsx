@@ -5,7 +5,7 @@ const Landing = () => (
   <div>
     <Container>
     <Header as='h2' icon textAlign='center' size='huge'>
-      <Icon name='bicycle' color='violet' />
+      <Icon name='bicycle' color='pink' />
       <Header.Content>
         Fitness Redifined for the 21st Century
       </Header.Content>
