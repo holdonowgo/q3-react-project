@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import banner from '../banner.jpg';
 import { connect } from 'react-redux'
-import { fetchRoutines } from '../actions'
+import { fetchExercises } from '../actions'
 import { bindActionCreators } from 'redux'
 import $ from 'jquery';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    routines: state.exercises
+    exercises: state.exercises
   }
 }
 
@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
 
 class Exercies extends Component {
 
-  handleSearch = (event) => {
+  refreshData = (event) => {
     this.props.fetchExercises();
   }
 
@@ -28,6 +28,9 @@ class Exercies extends Component {
           <img src={banner} />
           <div className="card-section">
             <h3>{exercise.name}</h3>
+            <h3>{exercise.type.name}</h3>
+            <h3>{exercise.muscle.name}</h3>
+            {/* <h3>{exercise.name}</h3> */}
           </div>
         </div>
       );
@@ -35,6 +38,13 @@ class Exercies extends Component {
 
     return (
       <div>
+        <button
+          type="button"
+          className="hollow button"
+          onClick={this.refreshData}>
+          {this.props.children}
+          'REFRESH'
+        </button>
         <div>
           {cards}
         </div>

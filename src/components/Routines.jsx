@@ -24,13 +24,13 @@ class Routines extends Component {
   render() {
     var cards = this.props.routines.map(routine => {
       return (
-        <div className="card">
+        <div className="card" key={routine.id}>
           <img src={banner} />
           <div className="card-section">
             <h3>Exercise: {routine.name}</h3>
-            <h3>Muscle: {routine.muscle.name}</h3>
-            <h3>Type: {routine.type.name}</h3>
-            <h3>Equipment: {routine.equipment.name}</h3>
+            <h4>Muscle: {routine.muscle.name}</h4>
+            <h4>Type: {routine.type.name}</h4>
+            <h4>Equipment: {routine.equipment.name}</h4>
           </div>
         </div>
       );
