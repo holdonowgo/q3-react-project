@@ -1,5 +1,4 @@
 import {bicepRoutines, chestRoutines, shoulderRoutines, tricepRoutines} from '../data/routines';
-import React, { Component } from 'react';
 import axios from 'axios';
 import * as Routes from "../helpers/api";
 
