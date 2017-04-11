@@ -39,7 +39,6 @@ class Exercies extends Component {
 
     return (
       <div>
-        <Navbar />
         <button
           type="button"
           className="hollow button"

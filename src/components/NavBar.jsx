@@ -19,37 +19,36 @@ export default class Navbar extends Component {
 
     return (
       <Menu>
-        <Menu.Item
-          name='editorials'
-          active={activeItem === 'editorials'}
+        <Link to="/"><Menu.Item
+          name='Home'
+          active={activeItem === 'Home'}
           onClick={this.handleItemClick}
-        >
-          <Link to="/">Home</Link>
-        </Menu.Item>
+        >Home
+        </Menu.Item></Link>
 
-        <Menu.Item
-          name='reviews'
-          active={activeItem === 'reviews'}
+          <Link to="/dashboard"><Menu.Item
+          name='dashboard'
+          active={activeItem === 'dashboard'}
           onClick={this.handleItemClick}
         >
-          <Link to="/dashboard">Dashboard</Link>
-        </Menu.Item>
+        Dashboard
+        </Menu.Item></Link>
 
-        <Menu.Item
-          name='upcomingEvents'
-          active={activeItem === 'upcomingEvents'}
+        <Link to="/exercises"><Menu.Item
+          name='Exercises'
+          active={activeItem === 'Exercises'}
           onClick={this.handleItemClick}
         >
-          <Link to="/exercises">Exercises</Link>
-        </Menu.Item>
+          Exercises
+        </Menu.Item></Link>
 
-        <Menu.Item
-          name='upcomingEvents'
-          active={activeItem === 'upcomingEvents'}
+        <Link to="/routines"><Menu.Item
+          name='Routines'
+          active={activeItem === 'Routines'}
           onClick={this.handleItemClick}
         >
-          <Link to="/routines">Routines</Link>
-        </Menu.Item>
+          Routines
+        </Menu.Item></Link>
       </Menu>
     )
   }

@@ -23,6 +23,7 @@ class App extends Component {
         </div>
         <Router>
           <div>
+            <Navbar />
             <Route exact path="/" component={IndexPage} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/exercises" component={Exercises} />
@@ -37,7 +38,6 @@ class App extends Component {
 const IndexPage = () => {
   return (
     <div>
-      <Navbar />
     </div>
   )
 }

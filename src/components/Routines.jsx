@@ -47,7 +47,6 @@ class Routines extends Component {
 
     return (
       <div>
-
         <Button.Group className='button-group'>
           <Button color='olive' value='biceps' onClick={this.handleSearch}>BICEPS</Button>
           <Button.Or />
