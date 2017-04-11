@@ -46,7 +46,6 @@ class Dashboard extends Component {
       }
         return (
             <div className="container">
-              <Navbar />
                 <div className="row">
                     <div className="large-6 columns"><C3Chart data={data} axis={axis} /></div>
                     <div className="large-6 columns"><C3Chart data={data1} /></div>
