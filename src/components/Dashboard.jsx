@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
 import chart from '../data/scatter';
 import gauge from '../charts/guage';
-import pie from '../charts/pie';
+import {muscleDonut, typeDonut, equipmentDonut} from '../charts/donut';
 import combination from '../charts/combination';
 import C3Chart from 'react-c3js';
 import 'c3/c3.css';
@@ -14,7 +14,8 @@ class Dashboard extends Component {
         columns: [
           ['data1', 30, 200, 100, 400, 150, 250],
           ['data2', 50, 20, 10, 40, 15, 25]
-        ]
+        ],
+        'stroke-width': '5px'
       };
 
       const data = {
@@ -49,8 +50,10 @@ class Dashboard extends Component {
                     <div className="large-6 columns"><C3Chart data={data1} /></div>
                 </div>
                 <div className="row">
-                    <div className="large-6 columns"><C3Chart data={gauge.data} gauge={gauge.gauge} color={gauge.color} size={gauge.size} /></div>
-                    <div className="large-6 columns"><C3Chart data={pie.data} /></div>
+                    <div className="large-4 columns"><C3Chart data={muscleDonut.data} /></div>
+                    {/* <div className="large-4 columns"><C3Chart data={gauge.data} gauge={gauge.gauge} color={gauge.color} size={gauge.size} /></div> */}
+                    <div className="large-4 columns"><C3Chart data={typeDonut.data} /></div>
+                    <div className="large-4 columns"><C3Chart data={equipmentDonut.data} /></div>
                 </div>
                 <div className="row">
                   <div className="large-12 columns"><C3Chart data={combination.data} /></div>

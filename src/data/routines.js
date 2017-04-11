@@ -140,31 +140,6 @@ export const bicepRoutines = [
       "id": 3,
       "name": "Barbell"
     }
-  },
-  {
-    "url": "youtube.com/watch?v=HVeYYDmT_I4",
-    "title": "Upper Body Split Workout - Back and Biceps Mass Building Workout Video",
-    "description": "Calorie burn + how to use this routine + printable workout @ http://bit.ly/1K6OgCZ 8 Week Fat Loss Programs & Meal Plans @ http://bit.ly/13EdZgX Keep up with ..."
-  },
-  {
-    "url": "youtube.com/watch?v=KqZG-vlcYhg",
-    "title": "Biceps and Triceps Superset Strength Workout - Upper Body Strength Routine",
-    "description": "Upper Body Strength Training Workout to burn fat and build lean muscle; Find all info for this routine @ http://bit.ly/1sikJ2J 8 Week Fat Loss Programs & Meal ..."
-  },
-  {
-    "url": "youtube.com/watch?v=Ln-T6-XQYWs",
-    "title": "Biceps Burnout! Dumbbell Bicep Workout and Cardio Training with Fitness Blender",
-    "description": "Full routine info for this Fitness Blender Cardio & Biceps Workout @ http://bit.ly/YXKm8s Lose 16-24 lbs in 8 weeks with our 8 Week Fat Loss Programs - find out ..."
-  },
-  {
-    "url": "youtube.com/watch?v=NDw5dxst_ls",
-    "title": "Toned, Lean Arms Workout -- Rhomboids, Shoulders, Bicep, Tricep, and Chest Workout",
-    "description": "Calorie burn info & printable routine @ http://bit.ly/RckyBc Lose 16-24 lbs in 8 weeks with our 8 Week Fat Loss Programs - find out how @ http://bit.ly/13EdZgX ..."
-  },
-  {
-    "url": "youtube.com/watch?v=Nj6kgsxaUGg",
-    "title": "Bicep & Tricep Super Set Workout - Resistance Band Exercises",
-    "description": "Find out how many calories this burns, what muscles you're working & more here: http://bit.ly/rz0nG1 Lose 16-24 lbs in 8 weeks with our free videos - find out ..."
   }
 ]
 
