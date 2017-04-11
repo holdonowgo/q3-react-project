@@ -1,4 +1,4 @@
-export const media = [
+const media = [
   {
     "url": "youtube.com/watch?v=dXiR7kQGegQ",
     "title": "Upper Body Split Workout - Chest and Triceps Mass Building Workout",
@@ -24,4 +24,6 @@ export const media = [
     "title": "Overhead Tricep Stretch",
     "description": "Stretch your triceps and lats with the overhead tricep stretch. Find out how many reps you should do, what muscles you're working and how to work it into a ..."
   }
-]
+];
+
+export default media;
