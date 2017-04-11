@@ -6,8 +6,7 @@ import { connect } from 'react-redux'
 import { fetchRoutines } from '../actions'
 import { bindActionCreators } from 'redux'
 import $ from 'jquery';
-import { Grid, Image, Button } from 'semantic-ui-react'
-import { Message, Menu, Segment } from 'semantic-ui-react'
+import { Grid, Image, Button, Message, Menu, Segment } from 'semantic-ui-react'
 import '../App.css';
 import './Routines.css';
 
