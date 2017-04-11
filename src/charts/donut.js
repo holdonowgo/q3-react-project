@@ -76,7 +76,25 @@ muscleDonut.data.columns = columns;
 
 let typeResult = [];
 
-exercises.reduce(function (res, value) {
+let mappedExercises = exercises.map((exercise, index) => {
+  if (index % 7 === 0) {
+    return {...exercise, type: {id: exercise.type.id, name: 'Strongman'}};
+  } else if (index % 6 === 0){
+      return {...exercise, type: {id: exercise.type.id, name: 'Stretching'}};
+  } else if (index % 5 === 0){
+      return {...exercise, type: {id: exercise.type.id, name: 'Strength'}};
+  } else if (index % 4 === 0){
+      return {...exercise, type: {id: exercise.type.id, name: 'Powerlifting'}};
+  } else if (index % 3 === 0){
+      return {...exercise, type: {id: exercise.type.id, name: 'Plyometrics'}};
+  } else if (index % 2 === 0){
+      return {...exercise, type: {id: exercise.type.id, name: 'Olympic Weightlifting'}};
+  } else if (index % 1 === 0){
+      return {...exercise, type: {id: exercise.type.id, name: 'Cardio'}};
+  }
+});
+
+mappedExercises.reduce(function (res, value) {
     if (!res[value.type.name]) {
         res[value.type.name] = {
             qty: 0,

@@ -5,6 +5,7 @@ import cardio from '../../public/images/Health_Fitness_Icons/PNGs - Multicolor/h
 import { connect } from 'react-redux'
 import { fetchRoutines } from '../actions'
 import { bindActionCreators } from 'redux'
+import Navbar from './NavBar'
 import $ from 'jquery';
 import { Grid, Image, Button, Message, Menu, Segment } from 'semantic-ui-react'
 import '../App.css';

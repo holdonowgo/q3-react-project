@@ -23,8 +23,8 @@ class App extends Component {
         </div>
         <Router>
           <div>
+            <Navbar />
             <Route exact path="/" component={IndexPage} />
-            <Route path="/two" component={SecondPage} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/exercises" component={Exercises} />
             <Route path="/routines" component={Routines} />
@@ -34,27 +34,13 @@ class App extends Component {
     );
   };
 }
-const Hello = () => {
-  return <div> hello </div>
-}
 
 const IndexPage = () => {
   return (
-    <div></div>
-  )
-}
-
-const SecondPage = () => {
-  return (
-    <div className="App">
-      <div className="App-header">
-        <img src={banner2} className="App-logo" alt="logo" />
-        <h2>More Stuff Is Here</h2>
-        <Navbar />
-      </div>
-      <Dashboard />
+    <div>
     </div>
   )
 }
+
 
 export default App;

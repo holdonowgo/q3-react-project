@@ -7,6 +7,7 @@ import {muscleDonut, typeDonut, equipmentDonut} from '../charts/donut';
 import { Table, Grid, Image, Button, Message, Menu, Segment } from 'semantic-ui-react'
 import combination from '../charts/combination';
 import C3Chart from 'react-c3js';
+import Navbar from './NavBar'
 import 'c3/c3.css';
 import '../App.css';
 import './Dashboard.css';

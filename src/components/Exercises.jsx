@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import banner from '../banner.jpg';
-import { connect } from 'react-redux'
-import { fetchExercises } from '../actions'
-import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux';
+import { fetchExercises } from '../actions';
+import { bindActionCreators } from 'redux';
 import strength from '../../public/images/Health_Fitness_Icons/PNGs - Multicolor/dumbbell@2x.png';
 import cardio from '../../public/images/Health_Fitness_Icons/PNGs - Multicolor/heartbeat@2x.png';
+import Navbar from './NavBar';
 import $ from 'jquery';
 import { Grid, Image, Button, Message, Menu, Segment } from 'semantic-ui-react'
 import '../App.css';
@@ -12,7 +13,8 @@ import './Exercies.css';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    exercises: state.exercises
+    exercises: state.exercises.data,
+    status: state.exercises.status
   }
 }
 
@@ -40,6 +42,7 @@ class Exercies extends Component {
     //     </div>
     //   );
     // });
+      console.log(this.props);
       var segments = this.props.exercises.map(exercise => {
         return (
           <Grid.Row centered key={exercise.id}>
@@ -56,10 +59,11 @@ class Exercies extends Component {
         );
       });
 
+    console.log('status:', this.props.status);
     return (
       <div>
         <Button.Group className='button-group'>
-          <Button className='button' color='olive' value='biceps' onClick={this.refreshData}>{this.props.children}REFRESH</Button>
+          <Button className={this.props.status === 'pending' ? 'loading' : 'primary'} color='olive' value='biceps' onClick={this.refreshData}>{this.props.children}REFRESH</Button>
         </Button.Group>
         <Grid centered columns={3}>
           {segments}
