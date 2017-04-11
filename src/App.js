@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import banner2 from './woman-dumbell-exercise.svg';
+import atomic from '../public/images/Health_Fitness_Icons/PNGs - Multicolor/atomic@2x.png';
 import Routines from './components/Routines';
 import Exercises from './components/Exercises';
 import Dashboard from './components/Dashboard';
@@ -17,7 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={banner2} className="App-logo" alt="logo" />
+          <img src={atomic} className="App-logo" alt="logo" />
           <h2>Welcome to Fit-Init</h2>
         </div>
         <Router>
