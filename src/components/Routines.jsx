@@ -28,7 +28,7 @@ class Routines extends Component {
     var cards = this.props.bicepRoutines.map(routine => {
       return (
         <div className="card">
-          <img src={banner} />
+          <img src={banner} alt="a banner"/>
           <div className="card-section">
             <h3>{routine.name}</h3>
           </div>
