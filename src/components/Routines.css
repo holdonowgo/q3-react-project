@@ -3,3 +3,11 @@
   font-family: 'Ubuntu', sans-serif;
   /*font-family: 'Palanquin Dark', sans-serif;*/
 }
+
+img {
+  display: inline-block !important;
+}
+
+.button-group {
+  padding: 5px;
+}

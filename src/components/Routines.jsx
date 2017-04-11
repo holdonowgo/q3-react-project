@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import banner from '../banner.jpg';
+import strength from '../../public/images/Health_Fitness_Icons/PNGs - Multicolor/dumbbell@2x.png';
+import cardio from '../../public/images/Health_Fitness_Icons/PNGs - Multicolor/heartbeat@2x.png';
 import { connect } from 'react-redux'
 import { fetchRoutines } from '../actions'
 import { bindActionCreators } from 'redux'
 import $ from 'jquery';
+import { Grid, Image, Button } from 'semantic-ui-react'
+import { Message, Menu, Segment } from 'semantic-ui-react'
+import '../App.css';
+import './Routines.css';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -22,57 +28,37 @@ class Routines extends Component {
   }
 
   render() {
-    var cards = this.props.routines.map(routine => {
+    var segments = this.props.routines.map(routine => {
       return (
-        <div className="card" key={routine.id}>
-          <img src={banner} />
-          <div className="card-section">
-            <h3>Exercise: {routine.name}</h3>
-            <h4>Muscle: {routine.muscle.name}</h4>
-            <h4>Type: {routine.type.name}</h4>
-            <h4>Equipment: {routine.equipment.name}</h4>
-          </div>
-        </div>
+        <Grid.Row centered key={routine.id}>
+          <Grid.Column />
+            <Grid.Column>
+              <Segment raised='true' textAlign='center'>
+                <Image src='../../images/profiles/elyse.png' size='small' shape='circular'/>
+                <Image src={routine.type.name === 'Strength' ? strength : cardio} size='small' shape='circular'/>
+                <Message header={routine.name} list={[routine.muscle.name, routine.type.name, routine.equipment.name]} />
+              </Segment>
+            </Grid.Column>
+          <Grid.Column />
+        </Grid.Row>
       );
     });
 
     return (
       <div>
-        <button
-          value="biceps"
-          type="submit"
-          className="hollow button"
-          onClick={this.handleSearch}>
-          {this.props.children}
-          BICEPS
-        </button>
-        <button
-          value="chest"
-          type="submit"
-          className="hollow button"
-          onClick={this.handleSearch}>
-          {this.props.children}
-          CHEST
-        </button>
-        <button
-          value="shoulders"
-          type="submit"
-          className="hollow button"
-          onClick={this.handleSearch}>
-          {this.props.children}
-          SHOULDERS
-        </button>
-        <button
-          value="triceps"
-          type="submit"
-          className="hollow button"
-          onClick={this.handleSearch}>
-          {this.props.children}
-          TRICEPS
-        </button>
-        <div>
-          {cards}
-        </div>
+        <Button.Group className='button-group'>
+          <Button color='olive' value='biceps' onClick={this.handleSearch}>BICEPS</Button>
+          <Button.Or />
+          <Button color='teal' value='chest' onClick={this.handleSearch}>CHEST</Button>
+          <Button.Or />
+          <Button color='violet' value='shoulders' onClick={this.handleSearch}>SHOULDERS</Button>
+          <Button.Or />
+          <Button color='pink' value='triceps' onClick={this.handleSearch}>TRICEPS</Button>
+        </Button.Group>
+
+        <Grid centered columns={3}>
+          {segments}
+        </Grid>
       </div>
     );
   }
