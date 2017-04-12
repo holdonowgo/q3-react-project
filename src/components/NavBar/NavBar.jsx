@@ -1,12 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import {Link} from 'react-router-dom';
-// import {
-//   Row,
-//   Column,
-//   TopBar,
-//   TopBarTitle,
-//   TopBarRight,
-// } from 'react-foundation';
 import { Menu } from 'semantic-ui-react'
 
 export default class Navbar extends Component {

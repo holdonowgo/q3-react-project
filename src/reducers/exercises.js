@@ -14,6 +14,7 @@ state = {data: [], status: 'complete'},
   action) => {
   switch (action.type) {
     case 'FETCH_EXERCISES_FULFILLED':
+    console.log('payload:', action.payload);
       return {...state, data: action.payload, status: 'complete'};
     case 'FETCH_EXERCISES_PENDING':
       return {...state, data: [], status: 'pending'};

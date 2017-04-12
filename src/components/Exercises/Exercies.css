@@ -11,3 +11,7 @@ img {
 .button-group {
   padding: 5px;
 }
+
+.RatingExampleHeart {
+  display: inline-block !important;
+}
