@@ -1,0 +1,30 @@
+exports[`Search snapshots 1`] = `
+<div>
+  <Container>
+    <Header
+      as="h2"
+      icon={true}
+      size="huge"
+      textAlign="center">
+      <Icon
+        as="i"
+        color="purple"
+        name="bicycle" />
+      <HeaderContent>
+        Fitness Redifined for the 21st Century
+      </HeaderContent>
+    </Header>
+    <br />
+    <p
+      className="landing">
+      Fit-Init is here to redifine the way you think about fitness.  From routines, to excersizes, to complex charts mapping your progress and training, fit init provides the solutions you need to get fit now!  Fit-Init Dashboard uses state of the art tracking technology and complex data mapping to give you all you need to formulate your ideal routine.  In addition we have routines, exercises and more to get you started.  Whether you want to loose 200lbs or get 1st place in that turkey trot 5k, fit-init provides the tools to get you there.  What are you waiting for?!
+    </p>
+    <br />
+    <Icon
+      as="i"
+      color="teal"
+      name="child"
+      size="huge" />
+  </Container>
+</div>
+`;
