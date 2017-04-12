@@ -42,7 +42,6 @@ class Exercies extends Component {
     //     </div>
     //   );
     // });
-      console.log(this.props);
       var segments = this.props.exercises.map(exercise => {
         return (
           <Grid.Row centered key={exercise.id}>
@@ -59,7 +58,6 @@ class Exercies extends Component {
         );
       });
 
-    console.log('status:', this.props.status);
     return (
       <div>
         <Button.Group className='button-group'>
