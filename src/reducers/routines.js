@@ -17,6 +17,7 @@ const routines = (
         //   shoulderRoutines: action.payload.shoulderRoutines,
         //   tricepRoutines: action.payload.tricepRoutines
         // };
+        console.log('payload:', action.payload);
         return action.payload.slice(0, 3);
       default:
         return state;

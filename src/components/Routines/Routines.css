@@ -11,3 +11,11 @@ img {
 .button-group {
   padding: 5px;
 }
+
+.grid {
+  padding: 10px;
+}
+
+.RatingExampleHeart {
+  display: inline-block !important;
+}
