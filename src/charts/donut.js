@@ -1,4 +1,4 @@
-var _ = require('lodash');
+let _ = require('lodash');
 import {exercises, exerciseTypes} from "../data/exercises";
 
 export const muscleDonut = {
