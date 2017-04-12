@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import banner from '../banner.jpg';
+// import banner from '../banner.jpg';
 import { connect } from 'react-redux';
-import { fetchExercises } from '../actions';
+import { fetchExercises } from '../../actions';
 import { bindActionCreators } from 'redux';
-import strength from '../../public/images/Health_Fitness_Icons/PNGs - Multicolor/dumbbell@2x.png';
-import cardio from '../../public/images/Health_Fitness_Icons/PNGs - Multicolor/heartbeat@2x.png';
-import Navbar from './NavBar';
+import strength from '../../../public/images/Health_Fitness_Icons/PNGs - Multicolor/dumbbell@2x.png';
+import cardio from '../../../public/images/Health_Fitness_Icons/PNGs - Multicolor/heartbeat@2x.png';
+import Navbar from '../NavBar/NavBar';
 import $ from 'jquery';
 import { Grid, Image, Button, Message, Menu, Segment } from 'semantic-ui-react'
-import '../App.css';
+import '../../App.css';
 import './Exercies.css';
 
 const mapStateToProps = (state, ownProps) => {

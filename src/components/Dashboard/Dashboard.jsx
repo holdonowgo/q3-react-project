@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
-import chart from '../data/scatter';
-import gauge from '../charts/guage';
-import {muscleDonut, typeDonut, equipmentDonut} from '../charts/donut';
+import chart from '../../data/scatter';
+import gauge from '../../charts/guage';
+import {muscleDonut, typeDonut, equipmentDonut} from '../../charts/donut';
 import { Table, Grid, Image, Button, Message, Menu, Segment } from 'semantic-ui-react'
-import combination from '../charts/combination';
+import combination from '../../charts/combination';
 import C3Chart from 'react-c3js';
-import Navbar from './NavBar'
+import Navbar from '../NavBar/NavBar'
+import MenuExampleVerticalPointing from '../Menu/Menu';
+import MenuExampleSubMenu from '../SubMenu/SubMenu';
 import 'c3/c3.css';
-import '../App.css';
+import '../../App.css';
 import './Dashboard.css';
 
 class Dashboard extends Component {
@@ -57,6 +59,8 @@ class Dashboard extends Component {
                   <Image src='../../images/profiles/elyse.png' size='small' shape='circular'/>
                   <Message header={'Stephen'} list={['Healthy', 'Active']} />
                 </Segment>
+                <MenuExampleSubMenu />
+                <MenuExampleVerticalPointing />
               </Table.Cell>
               <Grid centered columns={4}>
                 <Grid.Row centered columns={2}>
