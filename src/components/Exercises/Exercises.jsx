@@ -5,10 +5,10 @@ import { fetchExercises } from '../../actions';
 import { bindActionCreators } from 'redux';
 import strength from '../../../public/images/Health_Fitness_Icons/PNGs - Multicolor/dumbbell@2x.png';
 import cardio from '../../../public/images/Health_Fitness_Icons/PNGs - Multicolor/heartbeat@2x.png';
-import biceps from '../../../public/images/muscular-hand-barbell.svg';
-import chest from '../../../public/images/male-muscular-bust.svg';
-import shoulders from '../../../public/images/male-muscular-shoulder.svg';
-import triceps from '../../../public/images/bodybuilder-barbells-his-hands.svg';
+import biceps from '../../../public/images/muscular-hand-barbell.png';
+import chest from '../../../public/images/male-muscular-bust.png';
+import shoulders from '../../../public/images/male-muscular-shoulder.png';
+import triceps from '../../../public/images/bodybuilder-barbells-his-hands.png';
 import Navbar from '../NavBar/NavBar';
 import $ from 'jquery';
 import { Grid, Image, Button, Message, Menu, Segment } from 'semantic-ui-react'
@@ -55,8 +55,8 @@ class Exercies extends Component {
       }
       return (
         <Grid.Row centered key={exercise.id}>
-          <Grid.Column className='four wide'/>
-            <Grid.Column className='eight wide'>
+          <Grid.Column className='four wide computer one wide mobile'/>
+            <Grid.Column className='eight wide computer fourteen wide mobile'>
               <Segment raised='true' textAlign='center'>
                 <Image src='../../images/profiles/matthew.png' size='small' shape='circular'/>
                 <Image src={exercise.type.name === 'Strength' ? strength : cardio} size='small' shape='circular'/>
@@ -66,7 +66,7 @@ class Exercies extends Component {
                   list={[`MUSCLE:  ${  exercise.muscle.name}`, `TYPE:  ${  exercise.type.name}`, `EQUIPMENT:  ${  exercise.equipment.name}`]} />
               </Segment>
             </Grid.Column>
-          <Grid.Column className='four wide'/>
+          <Grid.Column className='four wide computer one wide mobile'/>
         </Grid.Row>
       );
     });
