@@ -24,7 +24,7 @@ export default class Navbar extends Component {
     const { color } = this.props
 
     return (
-      <Menu tabular inverted color={color} key={color}>
+      <Menu tabular inverted pointing color={color} key={color}>
         <Link to="/"><Menu.Item
           name='Home'
           active={activeItem === 'Home'}
