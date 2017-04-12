@@ -54,8 +54,8 @@ class Routines extends Component {
       }
       return (
         <Grid.Row centered key={routine.id}>
-          <Grid.Column className={'four wide column'} />
-            <Grid.Column className={'eight wide column'}>
+          <Grid.Column className={'four wide computer one wide mobile column'} />
+            <Grid.Column className={'eight wide computer fourteen wide mobile column'}>
               <Segment raised='true' textAlign='center'>
                 <Image src='../../images/profiles/elyse.png' size='small' shape='circular'/>
                 <Image src={routine.type.name === 'Strength' ? strength : cardio} size='small' shape='circular'/>
@@ -64,14 +64,14 @@ class Routines extends Component {
                 <Message header={routine.name} list={[routine.muscle.name, routine.type.name, routine.equipment.name]} />
               </Segment>
             </Grid.Column>
-          <Grid.Column className={'four wide column'} />
+          <Grid.Column className={'four wide computer one wide mobile column'} />
         </Grid.Row>
       );
     });
 
     return (
       <div>
-        <Button.Group size='big' round className='button-group'>
+        <Button.Group size='medium' round className='button-group'>
           <Button color='olive' value='biceps' onClick={this.handleSearch}>BICEPS</Button>
           <Button.Or />
           <Button color='teal' value='chest' onClick={this.handleSearch}>CHEST</Button>

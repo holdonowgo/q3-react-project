@@ -55,8 +55,8 @@ class Exercies extends Component {
       }
       return (
         <Grid.Row centered key={exercise.id}>
-          <Grid.Column className='four wide'/>
-            <Grid.Column className='eight wide'>
+          <Grid.Column className='four wide computer one wide mobile'/>
+            <Grid.Column className='eight wide computer fourteen wide mobile'>
               <Segment raised='true' textAlign='center'>
                 <Image src='../../images/profiles/matthew.png' size='small' shape='circular'/>
                 <Image src={exercise.type.name === 'Strength' ? strength : cardio} size='small' shape='circular'/>
@@ -66,7 +66,7 @@ class Exercies extends Component {
                   list={[`MUSCLE:  ${  exercise.muscle.name}`, `TYPE:  ${  exercise.type.name}`, `EQUIPMENT:  ${  exercise.equipment.name}`]} />
               </Segment>
             </Grid.Column>
-          <Grid.Column className='four wide'/>
+          <Grid.Column className='four wide computer one wide mobile'/>
         </Grid.Row>
       );
     });
