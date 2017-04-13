@@ -62,7 +62,7 @@ class Dashboard extends Component {
                 <MenuExampleSubMenu />
                 <MenuExampleVerticalPointing />
               </Table.Cell>
-              <Grid centered columns={4}>
+              <Grid centered stackable columns={4}>
                 <Grid.Row centered columns={2}>
                   <Grid.Column><C3Chart className='chart' data={data} axis={axis} /></Grid.Column>
                   <Grid.Column><C3Chart data={data1} /></Grid.Column>

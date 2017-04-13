@@ -8,7 +8,7 @@ export const muscleDonut = {
     },
     data: {
         // iris data from R
-        columns: [],
+        columns: [['strength', 2], ['fitness', 1]],
         type : 'donut',
         onclick: function (d, i) { console.log("onclick", d, i); },
         onmouseover: function (d, i) { console.log("onmouseover", d, i); },
