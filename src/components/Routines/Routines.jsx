@@ -71,7 +71,7 @@ class Routines extends Component {
 
     return (
       <div>
-        <Button.Group size='medium' round className='button-group'>
+        <Button.Group size='large' round className='button-group'>
           <Button color='olive' value='biceps' onClick={this.handleSearch}>BICEPS</Button>
           <Button.Or />
           <Button color='teal' value='chest' onClick={this.handleSearch}>CHEST</Button>
