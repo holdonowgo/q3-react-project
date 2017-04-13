@@ -64,17 +64,41 @@ class Dashboard extends Component {
               </Table.Cell>
               <Grid centered stackable columns={4}>
                 <Grid.Row centered columns={2}>
-                  <Grid.Column><C3Chart className='chart' data={data} axis={axis} /></Grid.Column>
-                  <Grid.Column><C3Chart data={data1} /></Grid.Column>
+                  <Grid.Column>
+                    <Segment>
+                      <C3Chart className='chart' data={data} axis={axis} />
+                    </Segment>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Segment>
+                      <C3Chart data={data1} />
+                    </Segment>
+                  </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered columns={3}>
-                  <Grid.Column><C3Chart data={muscleDonut.data} /></Grid.Column>
+                  <Grid.Column>
+                    <Segment>
+                      <C3Chart data={muscleDonut.data} />
+                    </Segment>
+                  </Grid.Column>
                   {/* <div className="large-4 columns"><C3Chart data={gauge.data} gauge={gauge.gauge} color={gauge.color} size={gauge.size} /></div> */}
-                  <Grid.Column><C3Chart data={typeDonut.data} /></Grid.Column>
-                  <Grid.Column><C3Chart data={equipmentDonut.data} /></Grid.Column>
+                  <Grid.Column>
+                    <Segment>
+                      <C3Chart data={typeDonut.data} />
+                    </Segment>
+                    </Grid.Column>
+                  <Grid.Column>
+                    <Segment>
+                      <C3Chart data={equipmentDonut.data} />
+                    </Segment>
+                  </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered columns={1}>
-                  <Grid.Column><C3Chart data={combination.data} /></Grid.Column>
+                  <Grid.Column>
+                    <Segment>
+                      <C3Chart data={combination.data} />
+                    </Segment>
+                  </Grid.Column>
               </Grid.Row>
             </Grid>
             </Table.Row>
