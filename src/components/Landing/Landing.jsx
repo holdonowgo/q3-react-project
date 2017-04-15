@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Icon, Image, Container } from 'semantic-ui-react'
+import { Header, Icon, Image, Container } from 'semantic-ui-react';
 import './Landing.css';
 
 const Landing = () => (
