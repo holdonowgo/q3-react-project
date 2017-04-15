@@ -7,6 +7,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Media from './components/Media/Media';
 import Navbar from './components/NavBar/NavBar'
 import Landing from './components/Landing/Landing'
+import FormExampleForm from './components/SignUp/SignUp'
+import LoginForm from './components/Login/Login'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -29,6 +31,8 @@ class App extends Component {
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/exercises" component={Exercises} />
             <Route path="/routines" component={Routines} />
+            <Route path="/signup" component={FormExampleForm} />
+            <Route path="/login" component={LoginForm} />
           </div>
         </Router>
       </div>

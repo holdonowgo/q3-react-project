@@ -48,6 +48,30 @@ export default class Navbar extends Component {
         >
           Routines
         </Menu.Item></Link>
+
+        <Link to="/signup"><Menu.Item
+          name='SignUp'
+          active={activeItem === 'SignUp'}
+          onClick={this.handleItemClick}
+        >
+          Signup
+        </Menu.Item></Link>
+
+        <Link to="/login"><Menu.Item
+          name='Login'
+          active={activeItem === 'Login'}
+          onClick={this.handleItemClick}
+        >
+          Login
+        </Menu.Item></Link>
+
+        <Link to="/logout"><Menu.Item
+          name='Logout'
+          active={activeItem === 'LogOut'}
+          onClick={this.handleItemClick}
+        >
+          Logout
+        </Menu.Item></Link>
       </Menu>
     )
   }
